@@ -20,7 +20,8 @@ bot.On<GroupMessage>(
 			b40i.close();
 			auto msg = MessageChain();
 			if (command.find("failed") != std::string::npos)
-				msg = MessageChain().Plain("没有找到你的查分器信息,请尝试使用“b40【空格】用户名”或者绑定QQ号。详情请使用“help”指令");
+				msg = MessageChain().Plain("没有找到你的查分器信息,请尝试使用“b40【空格】用户名”"
+					"或者绑定QQ号。详情请使用“help”指令");
 			else {
 				GroupImage img = bot.UploadGroupImage("./pic.png");
 				msg = MessageChain().Image(img);

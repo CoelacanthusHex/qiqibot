@@ -19,3 +19,10 @@ unsigned mask	=	0b11111111111111111111111111111111u;
 #define POHAI		0b00000000000000000000000001000000u
 #define SPEC_RAND	0b00000000000000000000000010000000u
 #define WIFE		0b00000000000000000000000100000000u
+
+string cs[] = { "aorb" , "b40", "dingshu", "eatwhat", "luck", "memes", "pohai",
+						"spec_rand", "wife" };
+unsigned cu[] = { AORB, B40, DINGSHU, EATWHAT, LUCK, MEMES, POHAI, SPEC_RAND, WIFE };
+unordered_map<string, unsigned> cscu;
+
+for (int i = 0; i < 9; ++i) cscu[cs[i]] = cu[i];

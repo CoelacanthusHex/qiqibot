@@ -25,6 +25,7 @@ catch (const std::exception& ex)
 
 bot.On<GroupMessage>(
 	[&](GroupMessage m) {
+		if ((mask & POHAI) == 0) return;
 		string command = m.MessageChain.GetPlainText();
 		auto id = m.Sender.QQ;
 		auto gid = m.Sender.Group.GID;

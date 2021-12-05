@@ -6,6 +6,7 @@
 
 bot.On<GroupMessage>(
 	[&](GroupMessage m) {
+		if ((mask & AORB) == 0) return;
 		string command = m.MessageChain.GetPlainText();
 		auto id = m.Sender.QQ;
 		auto gid = m.Sender.Group.GID;

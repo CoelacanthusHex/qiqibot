@@ -35,6 +35,8 @@ int main(int argc, char* argv[])
 
 	#include "lostConnect.h"
 
+	#include "disable.h"
+
 	#include "recall.h"
 
 	#include "luck.h"

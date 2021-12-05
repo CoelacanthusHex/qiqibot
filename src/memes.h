@@ -18,6 +18,7 @@ catch (const std::exception& ex)
 //随机表情包
 bot.On<GroupMessage>(
 	[&](GroupMessage m) {
+		if ((mask & MEMES) == 0) return;
 		auto gid = m.Sender.Group.GID;
 		Cyan::MessageChain mc = m.MessageChain;
 		if (m.AtMe() && (mc.GetPlainText() == " " || mc.GetPlainText() == ""))

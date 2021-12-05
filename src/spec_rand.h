@@ -1,5 +1,6 @@
 bot.On<GroupMessage>(
 	[&](GroupMessage m) {
+		if ((mask & SPEC_RAND) == 0) return;
 		string command = m.MessageChain.GetPlainText();
 		auto pos = command.find("随机");
 		if (pos == std::string::npos || pos != 0) return;

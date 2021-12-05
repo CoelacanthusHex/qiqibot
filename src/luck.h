@@ -29,6 +29,7 @@ string game[] = { "啤酒烧烤", "邦邦", "偶像大师", "maimai 鸡盘", "ma
 				  "jubeat", "nostalgia", "Pop\'n music", "头文字 D", "湾岸", "Deemo", "VOEZ", "maimai 旧框" };
 bot.On<GroupMessage>(
 	[&](GroupMessage m) {
+		if ((mask & LUCK) == 0) return;
 		string command = m.MessageChain.GetPlainText();
 		if (command == "求签" || command == "今日运势")
 		{

@@ -1,6 +1,7 @@
 // b40 模块
 bot.On<GroupMessage>(
 	[&](GroupMessage m) {
+		if ((mask & B40) == 0) return;
 		string command = m.MessageChain.GetPlainText();
 		auto gid = m.Sender.Group.GID;
 		auto id = m.Sender.QQ;

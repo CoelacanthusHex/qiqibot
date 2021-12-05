@@ -1,6 +1,7 @@
 //maimai什么歌封面是我老婆
 bot.On<GroupMessage>(
 	[&](GroupMessage m) {
+		if ((mask & WIFE) == 0) return;
 		string command = m.MessageChain.GetPlainText();
 		if (command == "maimai什么歌封面是我老婆")
 		{

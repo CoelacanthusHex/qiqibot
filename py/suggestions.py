@@ -32,9 +32,7 @@ def download():
     return True
 
 def getData():
-    judge = os.path.isfile(r'./musicData.json') and os.path.isfile(r'./staic.zip') \
-            and os.path.isfile(r'./timestamp')
-    if (judge):
+    if (os.path.isfile(r'./timestamp')):
         f = open(r'./timestamp')
         t = int(eval(f.read()))
         f.close()

@@ -14,12 +14,9 @@ bot.On<GroupMessage>(
 			if (command.find(" ") == std::string::npos)
 				b40o << " " << id;
 			b40o.close();
-			system("python3 ./maimai_best_40.py");
-			std::ifstream b40i("./b40", std::ifstream::in);
-			b40i >> command;
-			b40i.close();
+			int result = system("python3 ./maimai_best_40.py ");
 			auto msg = MessageChain();
-			if (command.find("failed") != std::string::npos)
+			if (result != 0)
 				msg = MessageChain().Plain("没有找到你的查分器信息,请尝试使用“b40【空格】用户名”"
 					"或者绑定QQ号。详情请使用“help”指令");
 			else {

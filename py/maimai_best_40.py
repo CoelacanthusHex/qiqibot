@@ -421,10 +421,7 @@ else:
     res, success = loop.run_until_complete(generate(payload = {'username': lines[1]}))
     if success == 0:
         flag = True
-f = open('./b40', 'w')
 if flag == True:
     res.save('./pic.png')
-    f.write('succeed')
 else:
-    f.write('failed')
-f.close()
+    exit(1)

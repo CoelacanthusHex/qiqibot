@@ -1,0 +1,4 @@
+*.h encoding=UTF-8
+*.hpp encoding=UTF-8
+*.cpp encoding=UTF-8
+*.py encoding=UTF-8

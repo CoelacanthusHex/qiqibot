@@ -1,4 +1,7 @@
 // 今日运势模块
+
+#include <ctime>
+
 vector<string> pros;
 vector<string> cons;
 try
@@ -37,8 +40,8 @@ bot.On<GroupMessage>(
 			auto id = m.Sender.QQ;
 			auto gid = m.Sender.Group.GID;
 			auto now = time(NULL);
-			struct tm tm_t;  localtime_s(&tm_t, &now);
-			auto day = tm_t.tm_mday;
+			std::tm *tm_t = localtime(&now);
+			auto day = tm_t->tm_mday;
 			if (lastUpdate.find(id) != lastUpdate.end() && lastUpdate[id].first == day) {
 				auto msg = lastUpdate[id].second;
 				bot.SendMessage(gid, msg);

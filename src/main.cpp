@@ -2,9 +2,9 @@
 
 #include <iostream>
 #include <map>
-#include <mirai.h>
+#include <mirai.hpp>
 #include <fstream>
-#include "myheader.h"
+#include "myheader.hpp"
 using namespace std;
 using namespace Cyan;
 
@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 	system("chcp 65001");
 #endif
 
-	#include "defines.h"
+	#include "defines.hpp"
 
 	while (true)
 	{
@@ -33,33 +33,33 @@ int main(int argc, char* argv[])
 	}
 	cout << "Bot Working..." << endl;
 
-	#include "lostConnect.h"
+	#include "lostConnect.hpp"
 
-	#include "disable.h"
+	#include "disable.hpp"
 
-	#include "recall.h"
+	#include "recall.hpp"
 
-	#include "luck.h"
+	#include "luck.hpp"
 
-	#include "help.h"
+	#include "help.hpp"
 
-	#include "b40.h"
+	#include "b40.hpp"
 
-	#include "eatwhat.h"
+	#include "eatwhat.hpp"
 
-	#include "memes.h"
+	#include "memes.hpp"
 
-	#include "aorb.h"
+	#include "aorb.hpp"
 
-	#include "pohai.h"
+	#include "pohai.hpp"
 
-	#include "wife.h"
+	#include "wife.hpp"
 
-	#include "dingshu.h"
+	#include "dingshu.hpp"
 
-	#include "spec_rand.h"
+	#include "spec_rand.hpp"
 
-	#include "restart.h"
+	#include "restart.hpp"
 
 	char ch;
 	while ((ch = getchar()) != 'q');
